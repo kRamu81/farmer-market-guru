@@ -38,7 +38,7 @@ farmer-guru/
 
 ---
 
-## 🚀 Quick Setup (Step by Step)
+##  Quick Setup (Step by Step)
 
 ### Prerequisites
 - Node.js 18+ (for frontend)
@@ -87,7 +87,7 @@ python scripts/scrape_prices.py
 
 ---
 
-## 🔑 Environment Variables
+##  Environment Variables
 
 Create `frontend/.env`:
 ```
@@ -102,7 +102,7 @@ ANTHROPIC_API_KEY=your_key_here
 
 ---
 
-## 📡 API Endpoints
+##  API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -114,7 +114,7 @@ ANTHROPIC_API_KEY=your_key_here
 
 ---
 
-## 🤖 ML Model Details
+##  ML Model Details
 
 - **Architecture**: LSTM (Long Short-Term Memory) + XGBoost Ensemble
 - **Training Data**: 10 years daily prices from AP markets
@@ -124,7 +124,7 @@ ANTHROPIC_API_KEY=your_key_here
 
 ---
 
-## 🌐 Supported Vegetables (Phase 1)
+##  Supported Vegetables (Phase 1)
 
 Tomato 🍅 · Onion 🧅 · Potato 🥔 · Green Chilli 🌶️
 
@@ -146,4 +146,15 @@ Phase 2 will add: Brinjal, Cabbage, Cauliflower, Carrot, Capsicum, Bitter Gourd
 
 ---
 
+### Screenshots : 
+
+<img width="1366" height="640" alt="image" src="https://github.com/user-attachments/assets/764c885c-5153-4659-ae1f-525eb54b5c17" />
+
+<img width="1093" height="361" alt="image" src="https://github.com/user-attachments/assets/fae291eb-e5d7-4642-ad5b-2da51726c444" />
+
+<img width="1132" height="420" alt="image" src="https://github.com/user-attachments/assets/51f7c00d-ec24-415f-921f-f278902a2162" />
+
+<img width="1366" height="646" alt="image" src="https://github.com/user-attachments/assets/418172c2-ad0f-43e6-b72d-a8b94157deed" />
+
+---
 Built with ❤️ for Andhra Pradesh farmers
