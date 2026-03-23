@@ -1,0 +1,170 @@
+/* ═══════════════════════════════════════════════════════════
+   రైతు మార్కెట్ గురు — Global Styles
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --bg-deep:       #060d0f;
+  --bg-surface:    #0d1f24;
+  --bg-card:       rgba(255,255,255,0.04);
+  --bg-card-hover: rgba(255,255,255,0.07);
+  --border:        rgba(255,255,255,0.09);
+  --border-bright: rgba(255,255,255,0.18);
+
+  --gold:          #f0b429;
+  --gold-dim:      #b07d10;
+  --green:         #22c55e;
+  --green-dim:     #15803d;
+  --red:           #ef4444;
+  --red-dim:       #991b1b;
+  --teal:          #2dd4bf;
+  --sky:           #38bdf8;
+
+  --text-primary:  #f0ece4;
+  --text-secondary:#94a3b8;
+  --text-muted:    #475569;
+
+  --font-display:  'Rozha One', serif;
+  --font-body:     'Noto Sans Telugu', sans-serif;
+  --font-mono:     'DM Mono', monospace;
+
+  --radius-sm:     8px;
+  --radius-md:     16px;
+  --radius-lg:     24px;
+  --radius-xl:     32px;
+
+  --shadow-glow-gold:  0 0 40px rgba(240,180,41,0.15);
+  --shadow-glow-green: 0 0 40px rgba(34,197,94,0.12);
+  --shadow-card:       0 8px 32px rgba(0,0,0,0.4);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: #1e3a40; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--teal); }
+
+/* ── Selection ── */
+::selection { background: rgba(240,180,41,0.3); color: #fff; }
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.6; transform: scale(0.97); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes priceFlash {
+  0%   { background: rgba(240,180,41,0.3); }
+  100% { background: transparent; }
+}
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.7) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes drawLine {
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
+}
+@keyframes particleFloat {
+  0%   { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.7; }
+  100% { transform: translateY(-100vh) translateX(20px) rotate(360deg); opacity: 0; }
+}
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+/* ── Utility Classes ── */
+.animate-fadeUp    { animation: fadeUp 0.6s ease forwards; }
+.animate-fadeIn    { animation: fadeIn 0.4s ease forwards; }
+.animate-scaleIn   { animation: scaleIn 0.4s cubic-bezier(.34,1.56,.64,1) forwards; }
+.animate-pulse     { animation: pulse 2s ease infinite; }
+.animate-float     { animation: float 3s ease-in-out infinite; }
+.animate-countUp   { animation: countUp 0.5s cubic-bezier(.34,1.56,.64,1) forwards; }
+
+.delay-100 { animation-delay: 0.1s; opacity: 0; }
+.delay-200 { animation-delay: 0.2s; opacity: 0; }
+.delay-300 { animation-delay: 0.3s; opacity: 0; }
+.delay-400 { animation-delay: 0.4s; opacity: 0; }
+.delay-500 { animation-delay: 0.5s; opacity: 0; }
+
+/* ── Glassmorphism Card ── */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+.glass-card:hover {
+  border-color: var(--border-bright);
+  box-shadow: var(--shadow-card), 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+/* ── Shimmer loading skeleton ── */
+.skeleton {
+  background: linear-gradient(90deg,
+    rgba(255,255,255,0.04) 0%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.04) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Noise texture overlay ── */
+.noise::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}

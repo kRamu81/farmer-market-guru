@@ -1,0 +1,20 @@
+fastapi==0.110.0
+uvicorn[standard]==0.27.1
+
+pandas==2.2.0
+numpy==1.26.4
+scikit-learn==1.4.0
+xgboost==2.0.3
+
+# TensorFlow removed (not supported in Python 3.11)
+# Replacement Deep Learning Framework:
+torch==2.2.0
+torchvision==0.17.0
+
+requests==2.31.0
+beautifulsoup4==4.12.3
+python-dotenv==1.0.1
+anthropic==0.18.1
+httpx==0.26.0
+joblib==1.3.2
+matplotlib==3.8.2
